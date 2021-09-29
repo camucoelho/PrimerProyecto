@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --gris: #3a3a3c; 
+    --rosa: #c2a7a0; 
+    --grisclaro: #25222291;
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    
+
+}
+
+*::selection{
+    background: #ffffff;
+}
+
+html{
+    font-size: 15px ;
+    overflow:scroll;
+}
+body{
+    background: #f9f9f9;
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    background: white;
+    box-shadow: 0 .80px 16px rgba(0, 0, 0, .1) ;
+    padding: 12px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*logo proyecto diseño*/
+.logo {
+    padding: 15px 20px;
+    font-size: 28px ;
+    color: var(--rosa);
+    padding: 15px 20px;
+}
+
+.logo span {
+color: var(--gris);
+}
+
+#btn-menu{
+    display: none;
+}
+
+/*menu hamburguesa*/
+header label {
+    display: none;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: flex-end;  
+}
+/*navegacion*/
+.navbar ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: capitalize;
+}
+/*componentes de navegacion*/
+.navbar li a{
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--grisclaro)
+}
+
+.navbar li a:hover{
+    color: var(--rosa);
+}
+    
+/*CELULAR*/
+@media(max-width: 767px) {
+    header label{
+        display: inline-block;
+        justify-content: flex-end ;
+    }  
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 100%;
+        background: #f9f9f9;
+        padding: 16px 32px;
+        border-top: .16px solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .80px 16px rgba(0, 0, 0, .1);
+        transform-origin: top;
+        width: 100%;
+        margin-left: -100%;
+        transition: .3s linear;
+        
+    }
+    .navbar ul{
+        flex-direction: column;
+        
+    }
+    
+    #btn-menu:checked ~ .navbar {
+        margin:0;
+    }
+}
+/*TABLET*/
+@media(min-width:768px) and (max-width:990px) {
+    header label{
+        display: inline-block;
+        justify-content: flex-end;
+    }  
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 100%;
+        background: #f9f9f9;
+        padding: 16px 32px;
+        border-top: .16px solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .80px 16px rgba(0, 0, 0, .1);
+        transform-origin: top;
+        margin-left: -100%;
+        transition: .3s linear;
+    }
+    .navbar ul{
+        flex-direction: column;
+    }
+    
+    #btn-menu:checked ~ .navbar {
+        margin:0;
+    }
+}
+
+/*section2*/
+.banner{
+    padding-top: 100px;
+    width: 100%;
+    height:100vh;
+    background-color: var(--rosa);
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(./img/dormitorio\ horizontal.jpg);
+    animation: banner 28s infinite linear ;
+}
+/*padre*/
+.banner-content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(153, 116, 151, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-content a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px ;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.banner-content a:hover{
+    background-color: whitesmoke;
+    color: var(--gris);
+}
+
+
+@keyframes banner{
+    0%{
+        background-image: url(./img/dormitorio\ horizontal.jpg);
+    }
+    25%{
+        background-image: url(./img/dormitorio\ horizontal.jpg);
+    }
+      26%{
+        background-image: url(./img/sillon\ amarillo.jpg);
+    }
+      50%{
+        background-image: url(./img/sillon\ amarillo.jpg);
+    }
+      51%{
+        background-image: url(./img/dormitorio.jpg);
+    }
+      75%{
+        background-image: url(./img/dormitorio.jpg);
+    }
+      76%{
+        background-image: url(./img/sillon\ planta.jpg);
+    }
+      100%{
+        background-image: url(./img/sillon\ planta.jpg);
+    }
+}
+
+/*section 3 productos*/
+
+.head-titulo{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: var(--gris);
+    padding-bottom: 30px;
+    margin-left: 80px;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+     
+}
+.card{
+    width: 330px;
+    height: 590px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .2) ;
+    overflow: hidden;
+    margin: 10px;
+    background: #f9f9f9;
+    cursor:default;
+    transition: all .4s ease;
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+    transform: translateY(-0.5%);
+
+}
+.card img{
+    width: 330px;
+    height: 310px;
+}
+.card h3{
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: var(--gris);   
+}
+.card p{
+    padding: 0 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--gris);
+    margin-bottom: 10px;
+}
+.card  h4{
+    font-weight: 500;
+    font-size: 20px;
+    color: #212122;
+    text-align: center;
+}
+
+.card  a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: rosybrown;
+    border: 1px solid rgba(188, 143, 143, 0.274);
+    border-radius: 4px;
+    font-size: 12px;
+    transition: all .4s ease;
+    text-align: center;
+}
+.card  a:hover{
+    background: var(--rosa);
+    color: white;
+}
+
+
+.section44{
+    padding-top: 100px;
+    min-height: 100vh;
+    background: var(--rosa);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*section contactUs*/
+
+.section4{
+    padding-top: 100px;
+    min-height: 50vh;
+    background: var(--rosa);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info{
+    color: white;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px ;
+    font-size: 18px;  
+}
+.contact-info i{
+    margin-right: 20px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+    flex: 1;
+}
+
+.contact-form h2{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-form .text-box{
+    background: white;
+    color: var(--gris);
+    border: none;
+    width: calc( 50% - 10px);
+    height: 50px ;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+    margin-right: 15px;
+}
+
+.contact-form textarea{
+    margin-top: 15px;
+    background: white;
+    color: var(--gris);
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical ;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.contact-form .send-btn{
+    float: right;
+    background: white;
+    color: var(--gris);
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer;
+    transition-property: background;
+    margin-bottom: 10px;
+}
+.contact-form .send-btn:hover{
+    background: var(--grisclaro);
+    color: white;
+}
+
+/*CELULAR*/
+@media(max-width: 767px) {
+   .contact-section{
+       flex-direction: column;
+    }
+    .contact-info{
+        font-size: 15px;
+        
+    }
+    .contact-info i{
+        display: flex;
+        
+    }
+
+    .contact-info .contact-form{
+        margin: 35px 50px;
+    }
+
+    .contact-form h2{
+        font-size: 30px;
+        margin-left: 25px;
+    }
+
+    .contact-form .text-box{
+        width: 100%; 
+        margin-left: 25px; 
+    }
+    .contact-form textarea{
+        width: 100%; 
+        margin-left: 25px; 
+    }
+
+    .form-titulo{
+        font-size: 16px;
+    }
+    .form-titulo2{
+        font-size: 16px;
+    }
+    .form-parrafo2{
+        margin-bottom: 100px;
+    }
+    .form-conteiner2{
+        margin-top: 20px ;
+        display: grid;
+        gap: 20px ;
+    }
+    .contact-form2 .text-box2{
+        width: 100%; 
+        margin-left: 25px; 
+    }
+    .contact-form2 textarea{
+        width: 100%; 
+        margin-left: 25px; 
+    }
+}
+/*section inicia sesion*/
+
+.inicia-sesion{
+    background: url(./img/inicia\ sesion2.jpg);
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position:bottom;
+    overflow:hidden;
+    display: flex;
+}
+
+.form{
+    background-color: var(--grisclaro); 
+    margin: auto;
+    width: 90%;
+    max-width: 400px ;
+    padding: 72px 48px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgba(238, 238, 238, 0.3);
+    text-align: center;
+}
+
+.form-titulo{
+    font-size: 32px;
+    margin-bottom: 80px ;
+    color: white;
+}
+.form-parrafo{
+    font-weight: 400;
+    color: white;
+}
+
+.form-link{
+    font-weight: 400;
+    color: var(--rosa);
+}
+
+.form-conteiner{
+    margin-top: 48px ;
+    display: grid;
+    gap: 40px ;
+}
+
+.form-group{
+    position: relative;
+    color: var(--rosa)
+}
+
+.form-imput{
+    width: 100%;
+    background: none;
+    color: var(--rosa);
+    font-size: 16px;
+    padding: .96px .48px ;
+    border: none;
+    border-bottom: 1px solid var(--rosa);
+}
+
+.form-imput:focus + .form-label, .form-imput:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: white;
+
+}
+
+.form-label{
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(2px);
+    transition: transform .5s, color .3s;
+}
+
+.form-submit{
+    background: var(--rosa);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    transition-property: background;
+}
+
+.form-submit:hover{
+    background: white;
+    color: var(--gris);
+
+}
+
+/*section crear cuenta*/
+
+.inicia-sesion2{
+    background: url(./img/inicia\ sesion1.jpg);
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position:bottom;
+    overflow:hidden;
+    display: flex;
+}
+
+.form2{
+    background-color: var(--rosa); 
+    margin: auto;
+    width: 90%;
+    max-width: 400px ;
+    padding: 72px 48px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgba(238, 238, 238, 0.3);
+    text-align: center;
+}
+
+.form-titulo2{
+    font-size: 32px;
+    margin-bottom: 40px ;
+    color: white;
+}
+.form-parrafo2{
+    font-weight: 300;
+    color: white;
+}
+
+.form-link2{
+    font-weight: 400;
+    color: var(--gris);
+}
+
+.form-conteiner2{
+    margin-top: 50px ;
+    display: grid;
+    gap: 40px ;
+}
+
+.form-group2{
+    position: relative;
+    color: var(--rosa)
+}
+
+.form-imput2{
+    width: 100%;
+    background: none;
+    color: var(--rosa);
+    font-size: 16px;
+    padding: .96px .48px ;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.form-imput2:focus + .form-label2, .form-imput2:not(:placeholder-shown) + .form-label2{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: white;
+
+}
+
+.form-label2{
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(2px);
+    transition: transform .5s, color .3s;
+}
+
+.form-submit2{
+    background: var(--grisclaro);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    transition-property: background;
+}
+
+.form-submit2:hover{
+    background: white;
+    color: var(--gris);
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresa a Proyecto DISEÑO</title>
+    <link rel="stylesheet" href="./PROY1.CSS">
+    <link rel="stylesheet" href="./PROY1.HTML">
+</head>
+<body>
+    <header>
+        <a href="./PROY1.HTML" class="logo">
+            <span>proyecto</span>DISEÑO
+        </a>
+    
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="./img/menu3.png" alt=""></label>
+    
+        <nav class="navbar">
+            <ul>
+                <li><a href="./PROY1.HTML">inicio</a></li>
+                <li><a href="./productos.html">productos</a></li>
+                <li><a href="./contacto.html">contacto</a></li>
+                <li><a href="./crear cuenta.html">crear cuenta</a></li>
+                <li><a href="./iniciar sesion.HTML">iniciar sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--section 4 inicia sesion/crear cuenta -->
+    
+    <section class="inicia-sesion" id="iniciar sesion">
+        <form class="form">
+            <h2 class="form-titulo"> Inicia Sesion</h2>
+            <p class="form-parrafo"> ¿Aun no tienes cuenta? <a href="./crear cuenta.html" class="form-link">Hace click aqui</a></p>
+            <div class="form-conteiner">
+                <div class="form-group">
+                    <input type="text" id="name" class="form-imput" placeholder=" ">
+                    <label for="name" class="form-label">Nombre</label>
+                    <span class="form-linea"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="user" class="form-imput" placeholder=" ">
+                    <label for="name" class="form-label">Email</label>
+                    <span class="form-linea"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="password" class="form-imput" placeholder=" ">
+                    <label for="name" class="form-label">Contraseña</label>
+                    <span class="form-linea"></span>
+                </div>
+                <input type="submit" class="form-submit" value="Entrar">
+            </div>
+        </form>
+    </section>
+
+    
+</body>
+</html>
